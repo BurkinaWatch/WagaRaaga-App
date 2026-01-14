@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, Mail, Phone, MapPin, Settings as SettingsIcon } from "lucide-react";
+import { ArrowLeftIcon, Mail, Phone, MapPin, Settings as SettingsIcon, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { BottomNavigation } from "@/components/BottomNavigation";
@@ -80,7 +80,21 @@ export default function Profile() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-base">
+          <Link href="/my-reservations">
+            <div className="flex items-center justify-between p-4 bg-[#f2ede8] rounded-2xl cursor-pointer hover-elevate group">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#fcf9f7] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-5 h-5 text-[#966b4f]" />
+                </div>
+                <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-semibold text-[#1c110c] text-base">
+                  My Reservations
+                </span>
+              </div>
+              <ArrowLeftIcon className="w-5 h-5 text-[#1c110c] rotate-180" />
+            </div>
+          </Link>
+
+          <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-base mt-2">
             Contact Information
           </h3>
           

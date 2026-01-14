@@ -11,6 +11,7 @@ import Profile from "@/pages/Profile";
 import Home from "@/pages/Home";
 import ProductDetails from "@/pages/ProductDetails";
 import ConfirmPayment from "@/pages/ConfirmPayment";
+import MyReservations from "@/pages/MyReservations";
 import Exchange from "@/pages/Exchange";
 import PostExchange from "@/pages/PostExchange";
 import ExchangeDetails from "@/pages/ExchangeDetails";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/add-product" component={AddProduct} />
       <Route path="/product/:id" component={ProductDetails} />
       <Route path="/confirm-payment" component={ConfirmPayment} />
+      <Route path="/my-reservations" component={MyReservations} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/post-exchange" component={PostExchange} />
       <Route path="/exchange-details/:id" component={ExchangeDetails} />
