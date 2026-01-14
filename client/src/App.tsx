@@ -7,14 +7,22 @@ import NotFound from "@/pages/not-found";
 
 import { StitchDesign as SignUp } from "@/pages/StitchDesign";
 import Login from "@/pages/Login";
+import Profile from "@/pages/Profile";
+import Home from "@/pages/Home";
+import Exchange from "@/pages/Exchange";
+import Loan from "@/pages/Loan";
+import Messages from "@/pages/Messages";
 
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
       <Route path="/" component={Login} />
       <Route path="/signup" component={SignUp} />
-      {/* Fallback to 404 */}
+      <Route path="/home" component={Home} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/exchange" component={Exchange} />
+      <Route path="/loan" component={Loan} />
+      <Route path="/messages" component={Messages} />
       <Route component={NotFound} />
     </Switch>
   );
