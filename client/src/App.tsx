@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
-import { StitchDesign as SignUp } from "@/pages/StitchDesign";
+import SignUp from "@/pages/SignUp";
 import Login from "@/pages/Login";
 import Profile from "@/pages/Profile";
 import Home from "@/pages/Home";
