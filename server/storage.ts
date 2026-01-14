@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Notification, type InsertNotification } from "@shared/schema";
+import { type User, type InsertUser, type Notification, type InsertNotification, type Conversation, type Message } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -12,18 +12,69 @@ export interface IStorage {
   getNotifications(userId: string): Promise<Notification[]>;
   createNotification(notification: InsertNotification): Promise<Notification>;
   markNotificationAsRead(id: string): Promise<void>;
+
+  getConversations(userId: string): Promise<Conversation[]>;
+  getMessages(conversationId: string): Promise<Message[]>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private notifications: Map<string, Notification>;
+  private conversations: Map<string, Conversation>;
+  private messages: Map<string, Message>;
 
   constructor() {
     this.users = new Map();
     this.notifications = new Map();
+    this.conversations = new Map();
+    this.messages = new Map();
 
     // Seed some initial notifications for demo purposes
     this.seedNotifications();
+    this.seedConversations();
+  }
+
+  private seedConversations() {
+    const mockConversations: Conversation[] = [
+      { 
+        id: "conv1", 
+        participant1Id: "demo", 
+        participant2Id: "aisha", 
+        participant2Name: "Aisha", 
+        participant2Avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150", 
+        lastMessage: "Yes, it is! I can meet you at the market tomorrow around noon if that works for", 
+        lastMessageTime: "12:30 PM" 
+      },
+      { 
+        id: "conv2", 
+        participant1Id: "demo", 
+        participant2Id: "kwame", 
+        participant2Name: "Kwame", 
+        participant2Avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150", 
+        lastMessage: "I'm interested in the beaded necklace you posted. Is it still available?", 
+        lastMessageTime: "Yesterday" 
+      },
+      { 
+        id: "conv3", 
+        participant1Id: "demo", 
+        participant2Id: "fatima", 
+        participant2Name: "Fatima", 
+        participant2Avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=150", 
+        lastMessage: "h", 
+        lastMessageTime: "Oct 24" 
+      },
+      { 
+        id: "conv4", 
+        participant1Id: "demo", 
+        participant2Id: "juma", 
+        participant2Name: "Juma", 
+        participant2Avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150", 
+        lastMessage: "I'm interested in the beaded necklace you posted. Is it still available?", 
+        lastMessageTime: "Oct 22" 
+      }
+    ];
+
+    mockConversations.forEach(c => this.conversations.set(c.id, c));
   }
 
   private seedNotifications() {
@@ -81,6 +132,16 @@ export class MemStorage implements IStorage {
     if (notification) {
       this.notifications.set(id, { ...notification, isRead: "true" });
     }
+  }
+
+  async getConversations(userId: string): Promise<Conversation[]> {
+    return Array.from(this.conversations.values())
+      .filter(c => c.participant1Id === userId || c.participant2Id === userId);
+  }
+
+  async getMessages(conversationId: string): Promise<Message[]> {
+    return Array.from(this.messages.values())
+      .filter(m => m.conversationId === conversationId);
   }
 }
 

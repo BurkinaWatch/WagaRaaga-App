@@ -17,6 +17,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendStatus(200);
   });
 
+  app.get("/api/conversations", async (req, res) => {
+    const userId = "demo";
+    const conversations = await storage.getConversations(userId);
+    res.json(conversations);
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
