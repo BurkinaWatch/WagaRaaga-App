@@ -27,10 +27,21 @@ export default function Exchange() {
           </Button>
         </Link>
         
-        <div className="flex flex-col items-center justify-center flex-1 mt-10">
-          <p className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-[#966b4f] text-base text-center">
-            No active trades found. Be the first to post one!
-          </p>
+        <div className="mt-8 flex flex-col gap-4">
+          <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-xl">
+            Recent Offers
+          </h3>
+          <Link href="/exchange-details/ex-1">
+            <div className="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-[#f2ede8] cursor-pointer hover-elevate transition-all">
+              <div className="w-16 h-16 rounded-xl overflow-hidden bg-[#f2ede8]">
+                <img src="https://images.unsplash.com/photo-1590739225287-bd31519780c3?auto=format&fit=crop&q=80&w=100" alt="Item" className="w-full h-full object-cover" />
+              </div>
+              <div className="flex flex-col">
+                <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-base">Handwoven Basket</span>
+                <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-[#966b4f] text-sm">Offered by Aisha • Accra</span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 

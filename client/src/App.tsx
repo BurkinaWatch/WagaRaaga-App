@@ -11,6 +11,7 @@ import Profile from "@/pages/Profile";
 import Home from "@/pages/Home";
 import Exchange from "@/pages/Exchange";
 import PostExchange from "@/pages/PostExchange";
+import ExchangeDetails from "@/pages/ExchangeDetails";
 import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/product/:id" component={ProductDetails} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/post-exchange" component={PostExchange} />
+      <Route path="/exchange-details/:id" component={ExchangeDetails} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
       <Route component={NotFound} />
