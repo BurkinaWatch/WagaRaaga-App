@@ -148,9 +148,11 @@ export default function ProductDetails() {
 
       <div className="fixed bottom-20 left-0 right-0 px-4 py-3 bg-[#fcf9f7] border-t border-[#f2ede8] z-10">
         <div className="max-w-[480px] mx-auto flex gap-3">
-          <Button variant="ghost" className="flex-1 bg-[#f2ede8] text-[#1c110c] rounded-2xl h-12 font-bold no-default-hover-elevate">
-            Reserve
-          </Button>
+          <Link href="/reservation-confirmed" className="flex-1">
+            <Button variant="ghost" className="w-full bg-[#f2ede8] text-[#1c110c] rounded-2xl h-12 font-bold no-default-hover-elevate">
+              Reserve
+            </Button>
+          </Link>
           <Link href="/confirm-payment" className="flex-[2]">
             <Button className="w-full bg-[#e87a30] hover:bg-[#d66a20] text-white rounded-2xl h-12 font-bold no-default-hover-elevate">
               Buy Now
