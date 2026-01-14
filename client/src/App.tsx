@@ -22,6 +22,7 @@ import Settings from "@/pages/Settings";
 import AddProduct from "@/pages/AddProduct";
 import Notifications from "@/pages/Notifications";
 import Chat from "@/pages/Chat";
+import HelpSupport from "@/pages/HelpSupport";
 
 function Router() {
   return (
@@ -43,6 +44,7 @@ function Router() {
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
       <Route path="/chat/:id" component={Chat} />
+      <Route path="/help-support" component={HelpSupport} />
       <Route component={NotFound} />
     </Switch>
   );
