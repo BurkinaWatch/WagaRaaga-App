@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowLeftIcon, Mail, Phone, MapPin, Settings as SettingsIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { BottomNavigation } from "@/components/BottomNavigation";
@@ -28,6 +28,12 @@ export default function Profile() {
             Profile
           </h1>
         </div>
+
+        <Link href="/settings">
+          <Button variant="ghost" size="icon" className="h-12 w-12 p-0 absolute right-4" data-testid="button-settings">
+            <SettingsIcon className="w-6 h-6 text-[#1c110c]" />
+          </Button>
+        </Link>
       </header>
 
       <div className="flex flex-col flex-1 max-w-[480px] mx-auto w-full px-4">

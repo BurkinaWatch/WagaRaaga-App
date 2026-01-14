@@ -12,6 +12,7 @@ import Home from "@/pages/Home";
 import Exchange from "@/pages/Exchange";
 import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
+import Settings from "@/pages/Settings";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/signup" component={SignUp} />
       <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
+      <Route path="/settings" component={Settings} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
