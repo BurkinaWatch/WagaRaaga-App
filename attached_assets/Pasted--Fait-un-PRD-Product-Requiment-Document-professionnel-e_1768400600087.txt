@@ -1,0 +1,43 @@
+           
+
+
+Fait un PRD (Product Requiment Document) professionnel et détaillé de cette description. améliore au besoins des  services et les fonctionalités de l'Appli.
+
+
+Appli: WagaRaaga
+
+Description:  Application (WagaRaaga) de s'échange, de troc  et de prêts sur gage. 
+Le but de l'application est de permettre de façon très simple et efficace à des utilisateurs connecté à leur profil de faire du troc de  produits de toutes cathégories et des prêts sur gage avec un code de trois témoins minimum.
+
+Elle contient plusieurs catégories de produits (Cuisine & Electroménager, Électronique & High-Tech, Mode & Accessoires, Maison & Meubles, Auto & Moto, Agriculture & Élevage, Santé & Bien-être, Art & Artisanat, Quicaillerie & Autres
+
+l'utilisateur se connecte, Demande un Troc ou un Prêt. les autres utilisateurs recevoivens, réagissent
+
+les Utilisateurs connectés peuvent chater en direct, commenter, liker. L'Âppli a donc un système de messagerie interne.
+Chaque utilisateurs à son espace compte privé au quel il se connecter par des identifiant. Chacun peut réagir à une publication et recevoir des notification et partager sur leurs réseaux sociaux. 
+Le partage de location et de numero de téléphone est autorisé sur l'appli.  Carte Google Maps (avec option offline) pour afficher points de collecte partenaires.
+
+Accessibilité linguistique (FR, anglais et toutes mes autres langue onternational).
+
+
+
+1. Troc
+   - Page de publication rapide : photo → reconnaissance IA pour catégoriser (ex : électronique, agricole, mode).
+   - Algorithme simple de matching basé sur prix estimé.
+   - Filtre par catégorie et localisation (Google Maps).
+   - Recherche par texte, voix ou image.
+
+2. Prêts sur gage
+   - Formulaire de dépôt avec valeur estimée en CFA.
+   - Validation par triple témoin (chaque témoin scanne un QR code unique).
+   - Contrat numérique généré automatiquement (PDF simple).
+   - Notifications SMS pour rappels.
+
+3. Sécurité
+   - Authentification à deux facteurs.
+   - Chiffrement basique des messages (end-to-end).
+   - Modération IA pour filtrer annonces frauduleuses.
+
+4. Localisation
+   - Carte Google Maps (avec option offline) pour afficher points de collecte partenaires.
+   - Géofencing : alerte si témoin hors zone validée.
