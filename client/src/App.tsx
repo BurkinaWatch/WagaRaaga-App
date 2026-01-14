@@ -9,6 +9,8 @@ import SignUp from "@/pages/SignUp";
 import Login from "@/pages/Login";
 import Profile from "@/pages/Profile";
 import Home from "@/pages/Home";
+import ProductDetails from "@/pages/ProductDetails";
+import ConfirmPayment from "@/pages/ConfirmPayment";
 import Exchange from "@/pages/Exchange";
 import PostExchange from "@/pages/PostExchange";
 import ExchangeDetails from "@/pages/ExchangeDetails";
@@ -16,7 +18,6 @@ import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
 import AddProduct from "@/pages/AddProduct";
-import ProductDetails from "@/pages/ProductDetails";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/settings" component={Settings} />
       <Route path="/add-product" component={AddProduct} />
       <Route path="/product/:id" component={ProductDetails} />
+      <Route path="/confirm-payment" component={ConfirmPayment} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/post-exchange" component={PostExchange} />
       <Route path="/exchange-details/:id" component={ExchangeDetails} />
