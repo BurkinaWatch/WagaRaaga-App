@@ -13,6 +13,7 @@ import Exchange from "@/pages/Exchange";
 import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
+import AddProduct from "@/pages/AddProduct";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
       <Route path="/settings" component={Settings} />
+      <Route path="/add-product" component={AddProduct} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
