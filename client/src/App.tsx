@@ -14,6 +14,7 @@ import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
 import AddProduct from "@/pages/AddProduct";
+import ProductDetails from "@/pages/ProductDetails";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/profile" component={Profile} />
       <Route path="/settings" component={Settings} />
       <Route path="/add-product" component={AddProduct} />
+      <Route path="/product/:id" component={ProductDetails} />
       <Route path="/exchange" component={Exchange} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />

@@ -108,14 +108,16 @@ export default function Home() {
           </h2>
           <div className="flex overflow-x-auto gap-4 no-scrollbar">
             {trendingProducts.map((product) => (
-              <div key={product.id} className="min-w-[160px] flex flex-col gap-2">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-[#f2ede8]">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+              <Link key={product.id} href={`/product/${product.id}`}>
+                <div className="min-w-[160px] flex flex-col gap-2 cursor-pointer group">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-[#f2ede8]">
+                    <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-semibold text-[#1c110c] text-sm line-clamp-2">
+                    {product.name}
+                  </span>
                 </div>
-                <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-semibold text-[#1c110c] text-sm line-clamp-2">
-                  {product.name}
-                </span>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
