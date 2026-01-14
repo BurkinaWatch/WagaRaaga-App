@@ -16,7 +16,7 @@ export default function AddProduct() {
           variant="ghost" 
           size="icon" 
           className="h-12 w-12 p-0 absolute left-4" 
-          onClick={() => setLocation("/home")}
+          onClick={() => setLocation("/")}
           data-testid="button-back"
         >
           <ArrowLeftIcon className="w-6 h-6 text-[#1c110c]" />

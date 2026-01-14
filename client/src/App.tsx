@@ -18,9 +18,9 @@ import AddProduct from "@/pages/AddProduct";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Login} />
+      <Route path="/" component={Home} />
+      <Route path="/login" component={Login} />
       <Route path="/signup" component={SignUp} />
-      <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
       <Route path="/settings" component={Settings} />
       <Route path="/add-product" component={AddProduct} />

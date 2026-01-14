@@ -2,7 +2,7 @@ import { Home, ArrowLeftRight, Banknote, MessageSquare, User } from "lucide-reac
 import { Link, useLocation } from "wouter";
 
 const navItems = [
-  { icon: Home, label: "Home", path: "/home" },
+  { icon: Home, label: "Home", path: "/" },
   { icon: ArrowLeftRight, label: "Exchange", path: "/exchange" },
   { icon: Banknote, label: "Loan", path: "/loan" },
   { icon: MessageSquare, label: "Messages", path: "/messages" },

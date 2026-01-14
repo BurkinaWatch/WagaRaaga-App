@@ -71,7 +71,7 @@ export default function SignUp() {
           <div className="flex flex-col items-center mt-2">
             <p className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-[#966b4f] text-sm text-center">
               Already have an account?{" "}
-              <Link href="/">
+              <Link href="/login">
                 <span className="text-[#1c110c] font-semibold cursor-pointer hover:underline">
                   Sign In
                 </span>
