@@ -60,7 +60,7 @@ export class MemStorage implements IStorage {
         participant2Id: "fatima", 
         participant2Name: "Fatima", 
         participant2Avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=150", 
-        lastMessage: "h", 
+        lastMessage: "I need raffia and dyes, and I'm looking for a loan of $50.", 
         lastMessageTime: "Oct 24" 
       },
       { 
@@ -75,6 +75,15 @@ export class MemStorage implements IStorage {
     ];
 
     mockConversations.forEach(c => this.conversations.set(c.id, c));
+
+    const mockMessages: Message[] = [
+      { id: "m1", conversationId: "conv3", senderId: "fatima", content: "Hello! I'm interested in your loan request. Can you tell me more about your business?", timestamp: "10:00 AM" },
+      { id: "m2", conversationId: "conv3", senderId: "demo", content: "Hi Fatima, thanks for reaching out! I run a small basket weaving business and need a loan for materials.", timestamp: "10:05 AM" },
+      { id: "m3", conversationId: "conv3", senderId: "fatima", content: "That sounds interesting! What kind of materials do you need, and how much are you looking to borrow?", timestamp: "10:10 AM" },
+      { id: "m4", conversationId: "conv3", senderId: "demo", content: "I need raffia and dyes, and I'm looking for a loan of $50. I can repay within 3 months.", timestamp: "10:15 AM" }
+    ];
+
+    mockMessages.forEach(m => this.messages.set(m.id, m));
   }
 
   private seedNotifications() {

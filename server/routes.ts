@@ -23,6 +23,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json(conversations);
   });
 
+  app.get("/api/conversations/:id/messages", async (req, res) => {
+    const messages = await storage.getMessages(req.params.id);
+    res.json(messages);
+  });
+
+  app.get("/api/conversations/:id", async (req, res) => {
+    const conversation = await storage.getConversations("demo"); // Simplified for demo
+    const conv = conversation.find(c => c.id === req.params.id);
+    res.json(conv);
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { BottomNavigation } from "@/components/BottomNavigation";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Bell } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -20,7 +20,12 @@ export default function Messages() {
             <ChevronLeft className="h-6 w-6" />
           </Button>
         </Link>
-        <h1 className="text-lg font-bold flex-1 text-center mr-10 [font-family:'Plus_Jakarta_Sans',Helvetica]">Messages</h1>
+        <h1 className="text-lg font-bold flex-1 text-center [font-family:'Plus_Jakarta_Sans',Helvetica]">Messages</h1>
+        <Link href="/notifications">
+          <Button variant="ghost" size="icon">
+            <Bell className="h-5 w-5" />
+          </Button>
+        </Link>
       </header>
 
       <main className="flex-1 overflow-y-auto px-4">
@@ -39,20 +44,22 @@ export default function Messages() {
         ) : (
           <div className="flex flex-col gap-6 mt-4">
             {conversations?.map((conv) => (
-              <div key={conv.id} className="flex gap-4 cursor-pointer hover-elevate rounded-xl p-1">
-                <Avatar className="h-14 w-14">
-                  <AvatarImage src={conv.participant2Avatar} alt={conv.participant2Name} />
-                  <AvatarFallback>{conv.participant2Name[0]}</AvatarFallback>
-                </Avatar>
-                <div className="flex-1 min-w-0 py-1">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-bold text-[#1c110c] [font-family:'Plus_Jakarta_Sans',Helvetica]">{conv.participant2Name}</h3>
+              <Link key={conv.id} href={`/chat/${conv.id}`}>
+                <div className="flex gap-4 cursor-pointer hover-elevate rounded-xl p-1">
+                  <Avatar className="h-14 w-14">
+                    <AvatarImage src={conv.participant2Avatar} alt={conv.participant2Name} />
+                    <AvatarFallback>{conv.participant2Name[0]}</AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 min-w-0 py-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-bold text-[#1c110c] [font-family:'Plus_Jakarta_Sans',Helvetica]">{conv.participant2Name}</h3>
+                    </div>
+                    <p className="text-sm text-[#966b4f] line-clamp-2 [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                      {conv.lastMessage}
+                    </p>
                   </div>
-                  <p className="text-sm text-[#966b4f] line-clamp-2 [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                    {conv.lastMessage}
-                  </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

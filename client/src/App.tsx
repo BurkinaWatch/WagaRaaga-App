@@ -21,6 +21,7 @@ import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
 import AddProduct from "@/pages/AddProduct";
 import Notifications from "@/pages/Notifications";
+import Chat from "@/pages/Chat";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function Router() {
       <Route path="/exchange-details/:id" component={ExchangeDetails} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
+      <Route path="/chat/:id" component={Chat} />
       <Route component={NotFound} />
     </Switch>
   );
