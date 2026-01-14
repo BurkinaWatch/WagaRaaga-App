@@ -10,6 +10,7 @@ import Login from "@/pages/Login";
 import Profile from "@/pages/Profile";
 import Home from "@/pages/Home";
 import Exchange from "@/pages/Exchange";
+import PostExchange from "@/pages/PostExchange";
 import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/add-product" component={AddProduct} />
       <Route path="/product/:id" component={ProductDetails} />
       <Route path="/exchange" component={Exchange} />
+      <Route path="/post-exchange" component={PostExchange} />
       <Route path="/loan" component={Loan} />
       <Route path="/messages" component={Messages} />
       <Route component={NotFound} />

@@ -7,7 +7,7 @@ export default function Exchange() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fcf9f7] pb-20">
       <header className="flex items-center pt-4 pb-2 px-4 relative w-full bg-[#fcf9f7]">
-        <Link href="/home">
+        <Link href="/">
           <Button variant="ghost" size="icon" className="h-12 w-12 p-0 absolute left-4">
             <ArrowLeftIcon className="w-6 h-6 text-[#1c110c]" />
           </Button>
@@ -20,10 +20,16 @@ export default function Exchange() {
         </div>
       </header>
 
-      <div className="flex flex-col flex-1 max-w-[480px] mx-auto w-full px-4">
-        <div className="flex flex-col items-center justify-center flex-1">
+      <div className="flex flex-col flex-1 max-w-[480px] mx-auto w-full px-4 mt-6">
+        <Link href="/post-exchange">
+          <Button className="w-full bg-[#e87a30] hover:bg-[#d66a20] text-white rounded-2xl h-14 font-bold text-lg no-default-hover-elevate">
+            Post New Trade
+          </Button>
+        </Link>
+        
+        <div className="flex flex-col items-center justify-center flex-1 mt-10">
           <p className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-[#966b4f] text-base text-center">
-            Exchange coming soon
+            No active trades found. Be the first to post one!
           </p>
         </div>
       </div>
