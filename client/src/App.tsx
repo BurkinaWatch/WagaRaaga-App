@@ -20,6 +20,7 @@ import Loan from "@/pages/Loan";
 import Messages from "@/pages/Messages";
 import Settings from "@/pages/Settings";
 import AddProduct from "@/pages/AddProduct";
+import Notifications from "@/pages/Notifications";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/profile" component={Profile} />
       <Route path="/settings" component={Settings} />
       <Route path="/add-product" component={AddProduct} />
+      <Route path="/notifications" component={Notifications} />
       <Route path="/product/:id" component={ProductDetails} />
       <Route path="/confirm-payment" component={ConfirmPayment} />
       <Route path="/my-reservations" component={MyReservations} />

@@ -1,5 +1,5 @@
 import { BottomNavigation } from "@/components/BottomNavigation";
-import { Search, ShoppingCart, Plus } from "lucide-react";
+import { Search, ShoppingCart, Plus, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
@@ -59,12 +59,17 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fcf9f7] pb-24">
       <header className="flex items-center justify-between pt-6 pb-4 px-4 w-full bg-[#fcf9f7]">
-        <div className="flex-1 text-center ml-8">
+        <div className="flex-1 text-center ml-12">
           <h1 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-xl tracking-tight">
             Marketplace
           </h1>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
+          <Link href="/notifications">
+            <Button variant="ghost" size="icon" className="h-10 w-10">
+              <Bell className="w-6 h-6 text-[#1c110c]" />
+            </Button>
+          </Link>
           <Link href="/add-product">
             <Button variant="ghost" size="icon" className="h-10 w-10">
               <Plus className="w-6 h-6 text-[#1c110c]" />
