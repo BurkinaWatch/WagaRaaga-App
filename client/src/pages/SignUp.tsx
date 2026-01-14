@@ -22,13 +22,15 @@ const socialIcons = [
   { alt: "Social icon 3" },
 ];
 
-export const StitchDesign = (): JSX.Element => {
+export default function SignUp() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fcf9f7]">
       <header className="flex items-center pt-4 pb-2 px-4 relative w-full bg-[#fcf9f7]">
-        <Button variant="ghost" size="icon" className="h-12 w-12 p-0 absolute left-4">
-          <ArrowLeftIcon className="w-6 h-6 text-[#1c110c]" />
-        </Button>
+        <Link href="/">
+          <Button variant="ghost" size="icon" className="h-12 w-12 p-0 absolute left-4">
+            <ArrowLeftIcon className="w-6 h-6 text-[#1c110c]" />
+          </Button>
+        </Link>
 
         <div className="flex flex-col items-center justify-center w-full">
           <h1 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1c110c] text-lg text-center tracking-[0] leading-[23px]">
